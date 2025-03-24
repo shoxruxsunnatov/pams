@@ -7,6 +7,7 @@ from main.utils import get_token
 
 
 class AccessKey(models.Model):
+    title = models.CharField(max_length=200)
     token = models.CharField(max_length=200, null=True, blank=True)
     times_used = models.IntegerField(default=0)
     date_expiration = models.DateTimeField(null=True, blank=True)
