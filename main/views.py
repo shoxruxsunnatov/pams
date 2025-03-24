@@ -26,7 +26,6 @@ class HomeViewAPI(CSRFExempt, View):
             "message": "failed",
             "errors": []
         }
-        print('token', token)
 
         if token:
             access_key = AccessKey.objects.filter(token=token, date_expiration__gt=timezone.now()).first()
